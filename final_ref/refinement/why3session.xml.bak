@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="6">
+<prover id="0" name="Alt-Ergo" version="2.4.0" timelimit="10" steplimit="0" memlimit="1000"/>
+<prover id="1" name="Z3" version="4.8.6" timelimit="10" steplimit="0" memlimit="1000"/>
+<file format="whyml" proved="true">
+<path name=".."/><path name="refinement.mlw"/>
+<theory name="Refinement" proved="true">
+ <goal name="inv_manySteps_A" proved="true">
+ <transf name="induction_pr" proved="true" >
+  <goal name="inv_manySteps_A.0" proved="true">
+  <proof prover="0"><result status="valid" time="0.00" steps="6"/></proof>
+  </goal>
+  <goal name="inv_manySteps_A.1" proved="true">
+  <proof prover="0"><result status="valid" time="0.00" steps="14"/></proof>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="inv_reachable_A" proved="true">
+ <proof prover="0"><result status="valid" time="0.00" steps="12"/></proof>
+ </goal>
+ <goal name="inv_manySteps_C" proved="true">
+ <transf name="induction_pr" proved="true" >
+  <goal name="inv_manySteps_C.0" proved="true">
+  <proof prover="0"><result status="valid" time="0.00" steps="6"/></proof>
+  </goal>
+  <goal name="inv_manySteps_C.1" proved="true">
+  <proof prover="0"><result status="valid" time="0.00" steps="14"/></proof>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="inv_reachable_C" proved="true">
+ <proof prover="0"><result status="valid" time="0.00" steps="12"/></proof>
+ </goal>
+ <goal name="manySteps_refinement" proved="true">
+ <transf name="induction_pr" proved="true" >
+  <goal name="manySteps_refinement.0" proved="true">
+  <proof prover="0"><result status="valid" time="0.00" steps="8"/></proof>
+  </goal>
+  <goal name="manySteps_refinement.1" proved="true">
+  <proof prover="0"><result status="valid" time="0.00" steps="20"/></proof>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="reachable_refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.00" steps="21"/></proof>
+ </goal>
+ <goal name="invariance_refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.00" steps="4"/></proof>
+ </goal>
+</theory>
+</file>
+<file format="whyml" proved="true">
+<path name=".."/><path name="selfstab-ring.mlw"/>
+<theory name="SelfStab_Ring" proved="true">
+ <goal name="incre&#39;vc" expl="VC for incre" proved="true">
+ <proof prover="0"><result status="valid" time="0.00" steps="4"/></proof>
+ </goal>
+ <goal name="first_last_fl&#39;vc" expl="VC for first_last_fl" proved="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="63"/></proof>
+ </goal>
+ <goal name="trans&#39;vc" expl="VC for trans" proved="true">
+ <transf name="split_vc" proved="true" >
+  <goal name="trans&#39;vc.0" expl="postcondition" proved="true">
+  <proof prover="1"><result status="valid" time="0.16" steps="356761"/></proof>
+  </goal>
+  <goal name="trans&#39;vc.1" expl="postcondition" proved="true">
+  <proof prover="1"><result status="valid" time="0.35" steps="400901"/></proof>
+  </goal>
+  <goal name="trans&#39;vc.2" expl="postcondition" proved="true">
+  <proof prover="1"><result status="valid" time="14.91" steps="39903256"/></proof>
+  </goal>
+  <goal name="trans&#39;vc.3" expl="postcondition" proved="true">
+  <proof prover="1"><result status="valid" time="0.03" steps="44462"/></proof>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="Refinement.initWorldA&#39;refn&#39;vc" expl="VC for initWorldA&#39;refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.02" steps="147"/></proof>
+ </goal>
+ <goal name="Refinement.initWorldC&#39;refn&#39;vc" expl="VC for initWorldC&#39;refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.11" steps="1068"/></proof>
+ </goal>
+ <goal name="Refinement.stepA&#39;refn&#39;vc" expl="VC for stepA&#39;refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="27"/></proof>
+ </goal>
+ <goal name="Refinement.stepC&#39;refn&#39;vc" expl="VC for stepC&#39;refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="74"/></proof>
+ </goal>
+ <goal name="oneToken" proved="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="23"/></proof>
+ </goal>
+</theory>
+</file>
+<file format="whyml" proved="true">
+<path name=".."/><path name="oneToken.mlw"/>
+<theory name="OneToken" proved="true">
+ <goal name="noTokens&#39;vc" expl="VC for noTokens" proved="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="39"/></proof>
+ </goal>
+ <goal name="atLeastOneToken&#39;vc" expl="VC for atLeastOneToken" proved="true">
+ <proof prover="0"><result status="valid" time="0.00" steps="41"/></proof>
+ </goal>
+ <goal name="atMostOneToken&#39;vc" expl="VC for atMostOneToken" proved="true">
+ <proof prover="0"><result status="valid" time="0.04" steps="372"/></proof>
+ </goal>
+ <goal name="trans&#39;vc" expl="VC for trans" proved="true">
+ <proof prover="0"><result status="valid" time="1.48" steps="15025"/></proof>
+ </goal>
+ <goal name="initWorld&#39;refn&#39;vc" expl="VC for initWorld&#39;refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.02" steps="188"/></proof>
+ </goal>
+ <goal name="step&#39;refn&#39;vc" expl="VC for step&#39;refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.00" steps="24"/></proof>
+ </goal>
+ <goal name="oneToken" proved="true">
+ <proof prover="0"><result status="valid" time="0.00" steps="15"/></proof>
+ </goal>
+</theory>
+</file>
+<file format="whyml" proved="true">
+<path name=".."/><path name="inductiveness.mlw"/>
+<theory name="Inductiveness" proved="true">
+ <goal name="inv_manySteps" proved="true">
+ <transf name="induction_pr" proved="true" >
+  <goal name="inv_manySteps.0" proved="true">
+  <proof prover="0"><result status="valid" time="0.00" steps="6"/></proof>
+  </goal>
+  <goal name="inv_manySteps.1" proved="true">
+  <proof prover="0"><result status="valid" time="0.00" steps="14"/></proof>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="inv_reachable" proved="true">
+ <proof prover="0"><result status="valid" time="0.00" steps="12"/></proof>
+ </goal>
+</theory>
+</file>
+<file format="whyml" proved="true">
+<path name=".."/><path name="bidir.mlw"/>
+<theory name="SelfStab_Ring" proved="true">
+ <goal name="state_lm" proved="true">
+ <proof prover="0"><result status="valid" time="0.03" steps="291"/></proof>
+ </goal>
+ <goal name="state_lm_2" proved="true">
+ <proof prover="0"><result status="valid" time="0.03" steps="277"/></proof>
+ </goal>
+ <goal name="atLeastOne" proved="true">
+ <transf name="split_vc" proved="true" >
+  <goal name="atLeastOne.0" proved="true">
+  <transf name="induction" proved="true" arg1="n" arg2="from" arg3="2">
+   <goal name="atLeastOne.0.0" expl="base case" proved="true">
+   <proof prover="1"><result status="valid" time="0.47" steps="36823"/></proof>
+   </goal>
+   <goal name="atLeastOne.0.1" expl="recursive case" proved="true">
+   <proof prover="1"><result status="valid" time="0.43" steps="52403"/></proof>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="only_one_side" proved="true">
+ <proof prover="0"><result status="valid" time="0.02" steps="193"/></proof>
+ </goal>
+ <goal name="val_l_stable" proved="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="18"/></proof>
+ </goal>
+ <goal name="val_r_stable" proved="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="24"/></proof>
+ </goal>
+ <goal name="trans&#39;vc" expl="VC for trans" proved="true">
+ <transf name="split_vc" proved="true" >
+  <goal name="trans&#39;vc.0" expl="postcondition" proved="true">
+  <proof prover="1" timelimit="40"><result status="valid" time="2.37" steps="3940911"/></proof>
+  </goal>
+  <goal name="trans&#39;vc.1" expl="postcondition" proved="true">
+  <proof prover="1" timelimit="40"><result status="valid" time="0.81" steps="1136325"/></proof>
+  </goal>
+  <goal name="trans&#39;vc.2" expl="postcondition" proved="true">
+  <proof prover="1" timelimit="40"><result status="valid" time="0.65" steps="996342"/></proof>
+  </goal>
+  <goal name="trans&#39;vc.3" expl="postcondition" proved="true">
+  <proof prover="1" timelimit="40"><result status="valid" time="3.34" steps="5076885"/></proof>
+  </goal>
+  <goal name="trans&#39;vc.4" expl="postcondition" proved="true">
+  <proof prover="1" timelimit="140"><result status="valid" time="9.24" steps="12330741"/></proof>
+  </goal>
+  <goal name="trans&#39;vc.5" expl="postcondition" proved="true">
+  <proof prover="1" timelimit="40"><result status="valid" time="0.04" steps="63549"/></proof>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="Refinement.initWorldA&#39;refn&#39;vc" expl="VC for initWorldA&#39;refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.02" steps="146"/></proof>
+ <proof prover="1" timelimit="20"><result status="valid" time="0.06" steps="39535"/></proof>
+ </goal>
+ <goal name="Refinement.initWorldC&#39;refn&#39;vc" expl="VC for initWorldC&#39;refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="41"/></proof>
+ <proof prover="1" timelimit="20"><result status="valid" time="0.03" steps="45729"/></proof>
+ </goal>
+ <goal name="Refinement.stepA&#39;refn&#39;vc" expl="VC for stepA&#39;refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="26"/></proof>
+ <proof prover="1" timelimit="20"><result status="valid" time="0.05" steps="40670"/></proof>
+ </goal>
+ <goal name="Refinement.stepC&#39;refn&#39;vc" expl="VC for stepC&#39;refn" proved="true">
+ <proof prover="0"><result status="valid" time="0.02" steps="139"/></proof>
+ <proof prover="1" timelimit="20"><result status="valid" time="0.09" steps="48525"/></proof>
+ </goal>
+ <goal name="oneToken" proved="true">
+ <proof prover="0"><result status="valid" time="0.01" steps="21"/></proof>
+ <proof prover="1" timelimit="20"><result status="valid" time="0.04" steps="47113"/></proof>
+ </goal>
+ <goal name="values_L_R">
+ <proof prover="1" timelimit="30"><result status="valid" time="0.03" steps="48990"/></proof>
+ </goal>
+</theory>
+</file>
+</why3session>
