@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="6">
+<prover id="0" name="Alt-Ergo" version="2.3.1" timelimit="5" steplimit="0" memlimit="2000"/>
+<prover id="1" name="CVC4" version="1.7" timelimit="1" steplimit="0" memlimit="1000"/>
+<prover id="2" name="Alt-Ergo" version="2.4.0" timelimit="140" steplimit="0" memlimit="1000"/>
+<file format="whyml" proved="true">
+<path name=".."/><path name="main.mlw"/>
+<theory name="Invariant_partial" proved="true">
+ <goal name="step_preserves_states" proved="true">
+ <proof prover="1" timelimit="5"><result status="valid" time="0.03"/></proof>
+ <proof prover="2"><result status="valid" time="0.00" steps="21"/></proof>
+ </goal>
+ <goal name="noNegative_step_TR" proved="true">
+ <transf name="induction_pr" proved="true" >
+  <goal name="noNegative_step_TR.0" proved="true">
+  <proof prover="1"><result status="valid" time="0.01"/></proof>
+  </goal>
+  <goal name="noNegative_step_TR.1" proved="true">
+  <proof prover="1"><result status="valid" time="0.02"/></proof>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="inv_step_bounded" proved="true">
+ <transf name="split_vc" proved="true" >
+  <goal name="inv_step_bounded.0" proved="true">
+  <proof prover="0"><result status="highfailure" time="0.01"/></proof>
+  <proof prover="1" timelimit="5" memlimit="2000"><result status="timeout" time="5.00"/></proof>
+  <transf name="inline_goal" proved="true" >
+   <goal name="inv_step_bounded.0.0" proved="true">
+   <transf name="split_all_full" proved="true" >
+    <goal name="inv_step_bounded.0.0.0" proved="true">
+    <proof prover="1"><result status="valid" time="0.05"/></proof>
+    </goal>
+    <goal name="inv_step_bounded.0.0.1" proved="true">
+    <proof prover="1"><result status="valid" time="0.05"/></proof>
+    </goal>
+    <goal name="inv_step_bounded.0.0.2" proved="true">
+    <proof prover="0"><result status="highfailure" time="0.00"/></proof>
+    <proof prover="1" timelimit="5" memlimit="2000"><result status="timeout" time="5.00"/></proof>
+    <transf name="inline_goal" proved="true" >
+     <goal name="inv_step_bounded.0.0.2.0" proved="true">
+     <proof prover="1" timelimit="30" memlimit="4000"><result status="valid" time="6.89"/></proof>
+     </goal>
+    </transf>
+    </goal>
+   </transf>
+   </goal>
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="first_last&#39;vc" expl="VC for first_last" proved="true">
+ <proof prover="1"><result status="valid" time="0.03"/></proof>
+ </goal>
+ <goal name="inv_step_unbounded" proved="true">
+ <transf name="split_vc" proved="true" >
+  <goal name="inv_step_unbounded.0" proved="true">
+  <proof prover="1" timelimit="5" memlimit="2000"><result status="valid" time="4.00"/></proof>
+  </goal>
+ </transf>
+ </goal>
+ <goal name="inv_manySteps" proved="true">
+ <transf name="induction_pr" proved="true" >
+  <goal name="inv_manySteps.0" proved="true">
+  <proof prover="1"><result status="valid" time="0.04"/></proof>
+  </goal>
+  <goal name="inv_manySteps.1" proved="true">
+  <proof prover="1"><result status="valid" time="0.07"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Invariant_Full" proved="true">
+ <goal name="inv_full_step_unbounded" proved="true">
+ <proof prover="1" timelimit="5"><result status="valid" time="0.03"/></proof>
+ </goal>
+</theory>
+<theory name="AtLeastOneUniversal_bounded" proved="true">
+ <goal name="atLeastOneToken&#39;vc" expl="VC for atLeastOneToken" proved="true">
+ <proof prover="1"><result status="valid" time="0.01"/></proof>
+ </goal>
+ <goal name="atLeastOneTokenLm" proved="true">
+ <proof prover="1"><result status="valid" time="0.47"/></proof>
+ </goal>
+</theory>
+<theory name="AtLeastOneUniversal_unbounded" proved="true">
+ <goal name="atLeastOneToken&#39;vc" expl="VC for atLeastOneToken" proved="true">
+ <proof prover="1"><result status="valid" time="0.07"/></proof>
+ </goal>
+ <goal name="first_last&#39;vc" expl="VC for first_last" proved="true">
+ <proof prover="1"><result status="valid" time="0.02"/></proof>
+ </goal>
+ <goal name="atLeastOneTokenLm" proved="true">
+ <proof prover="1"><result status="valid" time="0.03"/></proof>
+ </goal>
+</theory>
+</file>
+</why3session>
